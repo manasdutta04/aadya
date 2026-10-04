@@ -18,9 +18,15 @@ Open, privacy-first forecasting of when the next period is likely to start, expr
 
 Not a medical device. It does not diagnose, and it makes no contraception or fertility claims.
 
+## Try it in your browser
+
+Run the model in Google Colab, build a fresh test dataset, and check the scores, calibration, missed logs, the optional ovulation-test input and edge cases, with plain matplotlib and pandas charts. No setup, nothing to install.
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/manasdutta04/aadya/blob/main/notebooks/aadya_m1_playground.ipynb)
+
 ## How it performs
 
-Mean error (lower is better) on the three public boards. aadya-m1 is first on all three; on the two small real cohorts its lead over the classical reference is small and within noise.
+Mean error (lower is better) on the three public boards. aadya-m1 is first on all three; on the two small real cohorts it is slightly ahead of the classical reference, within noise. The numbers behind each chart are in the [model repo](https://huggingface.co/manasdutta04/aadya-m1/tree/main/benchmarks).
 
 ![Mean error on the three boards](assets/fig_benchmarks.png)
 
