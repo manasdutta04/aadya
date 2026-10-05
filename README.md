@@ -13,6 +13,8 @@
 
 Open, privacy-first forecasting of when the next period is likely to start, expressed as a probability distribution instead of a single date.
 
+*Aadya* (आद्या) is Sanskrit for “the first” or “the beginning”, a fitting name for a model that forecasts the start of a cycle, whose day one is the first day of bleeding.
+
 - **Model:** [aadya-m1 on Hugging Face](https://huggingface.co/manasdutta04/aadya-m1)
 - **This repository** is for the community: bug reports, ideas, and new forecasting methods that follow the interface in [`forecaster_template.py`](forecaster_template.py).
 
