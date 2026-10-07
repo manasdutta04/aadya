@@ -15,7 +15,8 @@ Open, privacy-first forecasting of when the next period is likely to start, expr
 
 *Aadya* (आद्या) is Sanskrit for “the first” or “the beginning”, a fitting name for a model that forecasts the start of a cycle, whose day one is the first day of bleeding.
 
-- **Model:** [aadya-m1 on Hugging Face](https://huggingface.co/manasdutta04/aadya-m1)
+- **Models:** [aadya-m1](https://huggingface.co/manasdutta04/aadya-m1) (256M parameters, full capacity) and [aadya-m1-mini](https://huggingface.co/manasdutta04/aadya-m1-mini) (0.84M parameters, 3.4 MB, for phones and low-power devices). Same API.
+- **Live demos:** [aadya-m1](https://huggingface.co/spaces/manasdutta04/aadya-m1-try) and [aadya-m1-mini](https://huggingface.co/spaces/manasdutta04/aadya-m1-mini-try)
 - **This repository** is for the community: bug reports, ideas, and new forecasting methods that follow the interface in [`forecaster_template.py`](forecaster_template.py).
 
 Not a medical device. It does not diagnose, and it makes no contraception or fertility claims.
@@ -28,7 +29,7 @@ Run the model in Google Colab, build a fresh test dataset, and check the scores,
 
 ## How it performs
 
-Mean error (lower is better) on the three public boards. aadya-m1 is first on all three; on the two small real cohorts it is slightly ahead of the classical reference, within noise. The numbers behind each chart are in the [model repo](https://huggingface.co/manasdutta04/aadya-m1/tree/main/benchmarks).
+Mean error (lower is better) on the public boards: simulated users (539), and 364 real users from two public cohorts (251 Creighton, scored cross-fitted, and 113 Marquette). aadya-m1 is first on mean error on all of them. On the pooled real users its lead over the classical Bayesian reference is small (about 1% lower error) but clear; on each small cohort alone it is within noise. On an unseen simulated generator the lead over the strongest methods disappears; it stays clearly ahead of simple heuristics. The numbers behind each chart are in the [model repo](https://huggingface.co/manasdutta04/aadya-m1/tree/main/benchmarks).
 
 ![Mean error on the three boards](assets/fig_benchmarks.png)
 
@@ -39,6 +40,17 @@ It outputs a probability for every possible cycle length, so an app can show a w
 ![Example forecasts](assets/fig_forecast.png)
 
 Full tables, method and caveats are on the [model card](https://huggingface.co/manasdutta04/aadya-m1).
+
+## Which model should I use?
+
+| | aadya-m1 | aadya-m1-mini |
+|---|---|---|
+| Parameters | 256M | 0.84M |
+| Weights | about 1 GB | 3.4 MB |
+| Best for | servers, desktops, research, fine-tuning | phones, browsers, low-power devices |
+| Mean error on 364 public real users (lower is better) | 1.930 | 1.932 (level) |
+
+Both are measured the same way. On the real data we have, the small model matches the large one, so choosing it costs nothing in accuracy there; the difference is size and capacity.
 
 ## Contribute
 
