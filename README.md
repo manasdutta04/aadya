@@ -19,6 +19,8 @@ Open, privacy-first forecasting of when the next period is likely to start, expr
 - **Live demos:** [aadya-m1](https://huggingface.co/spaces/manasdutta04/aadya-m1-try) and [aadya-m1-mini](https://huggingface.co/spaces/manasdutta04/aadya-m1-mini-try)
 - **This repository** is for the community: bug reports, ideas, and new forecasting methods that follow the interface in [`forecaster_template.py`](forecaster_template.py).
 
+**Paper:** [aadya-m1: An Open, On-Device Probabilistic Model for Calibrated Next-Period Forecasting](https://doi.org/10.5281/zenodo.23236800) (Zenodo, DOI 10.5281/zenodo.23236800).
+
 Not a medical device. It does not diagnose, and it makes no contraception or fertility claims.
 
 ## Try it in your browser
