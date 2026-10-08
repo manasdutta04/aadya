@@ -52,6 +52,8 @@ Full tables, method and caveats are on the [model card](https://huggingface.co/m
 
 Both are measured the same way. On the real data we have, the small model matches the large one, so choosing it costs nothing in accuracy there; the difference is size and capacity.
 
+![aadya-m1 against aadya-m1-mini](assets/fig_main_vs_mini.png)
+
 ## Contribute
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md). In short: keep real people's data out of issues and pull requests, show uncertainty, and keep changes small and focused.
